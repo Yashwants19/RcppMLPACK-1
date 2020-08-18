@@ -114,6 +114,59 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// bayesian_linear_regression_mlpackMain
+void bayesian_linear_regression_mlpackMain();
+RcppExport SEXP _RcppMLPACK_bayesian_linear_regression_mlpackMain() {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    bayesian_linear_regression_mlpackMain();
+    return R_NilValue;
+END_RCPP
+}
+// IO_GetParamBayesianLinearRegressionPtr
+SEXP IO_GetParamBayesianLinearRegressionPtr(const std::string& paramName);
+RcppExport SEXP _RcppMLPACK_IO_GetParamBayesianLinearRegressionPtr(SEXP paramNameSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const std::string& >::type paramName(paramNameSEXP);
+    rcpp_result_gen = Rcpp::wrap(IO_GetParamBayesianLinearRegressionPtr(paramName));
+    return rcpp_result_gen;
+END_RCPP
+}
+// IO_SetParamBayesianLinearRegressionPtr
+void IO_SetParamBayesianLinearRegressionPtr(const std::string& paramName, SEXP ptr);
+RcppExport SEXP _RcppMLPACK_IO_SetParamBayesianLinearRegressionPtr(SEXP paramNameSEXP, SEXP ptrSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const std::string& >::type paramName(paramNameSEXP);
+    Rcpp::traits::input_parameter< SEXP >::type ptr(ptrSEXP);
+    IO_SetParamBayesianLinearRegressionPtr(paramName, ptr);
+    return R_NilValue;
+END_RCPP
+}
+// SerializeBayesianLinearRegressionPtr
+Rcpp::RawVector SerializeBayesianLinearRegressionPtr(SEXP ptr);
+RcppExport SEXP _RcppMLPACK_SerializeBayesianLinearRegressionPtr(SEXP ptrSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type ptr(ptrSEXP);
+    rcpp_result_gen = Rcpp::wrap(SerializeBayesianLinearRegressionPtr(ptr));
+    return rcpp_result_gen;
+END_RCPP
+}
+// DeserializeBayesianLinearRegressionPtr
+SEXP DeserializeBayesianLinearRegressionPtr(Rcpp::RawVector str);
+RcppExport SEXP _RcppMLPACK_DeserializeBayesianLinearRegressionPtr(SEXP strSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::RawVector >::type str(strSEXP);
+    rcpp_result_gen = Rcpp::wrap(DeserializeBayesianLinearRegressionPtr(str));
+    return rcpp_result_gen;
+END_RCPP
+}
 // cf_mlpackMain
 void cf_mlpackMain();
 RcppExport SEXP _RcppMLPACK_cf_mlpackMain() {
@@ -174,59 +227,6 @@ BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     dbscan_mlpackMain();
     return R_NilValue;
-END_RCPP
-}
-// decision_stump_mlpackMain
-void decision_stump_mlpackMain();
-RcppExport SEXP _RcppMLPACK_decision_stump_mlpackMain() {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    decision_stump_mlpackMain();
-    return R_NilValue;
-END_RCPP
-}
-// IO_GetParamDSModelPtr
-SEXP IO_GetParamDSModelPtr(const std::string& paramName);
-RcppExport SEXP _RcppMLPACK_IO_GetParamDSModelPtr(SEXP paramNameSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const std::string& >::type paramName(paramNameSEXP);
-    rcpp_result_gen = Rcpp::wrap(IO_GetParamDSModelPtr(paramName));
-    return rcpp_result_gen;
-END_RCPP
-}
-// IO_SetParamDSModelPtr
-void IO_SetParamDSModelPtr(const std::string& paramName, SEXP ptr);
-RcppExport SEXP _RcppMLPACK_IO_SetParamDSModelPtr(SEXP paramNameSEXP, SEXP ptrSEXP) {
-BEGIN_RCPP
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const std::string& >::type paramName(paramNameSEXP);
-    Rcpp::traits::input_parameter< SEXP >::type ptr(ptrSEXP);
-    IO_SetParamDSModelPtr(paramName, ptr);
-    return R_NilValue;
-END_RCPP
-}
-// SerializeDSModelPtr
-Rcpp::RawVector SerializeDSModelPtr(SEXP ptr);
-RcppExport SEXP _RcppMLPACK_SerializeDSModelPtr(SEXP ptrSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< SEXP >::type ptr(ptrSEXP);
-    rcpp_result_gen = Rcpp::wrap(SerializeDSModelPtr(ptr));
-    return rcpp_result_gen;
-END_RCPP
-}
-// DeserializeDSModelPtr
-SEXP DeserializeDSModelPtr(Rcpp::RawVector str);
-RcppExport SEXP _RcppMLPACK_DeserializeDSModelPtr(SEXP strSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< Rcpp::RawVector >::type str(strSEXP);
-    rcpp_result_gen = Rcpp::wrap(DeserializeDSModelPtr(str));
-    return rcpp_result_gen;
 END_RCPP
 }
 // decision_tree_mlpackMain
@@ -1965,17 +1965,17 @@ static const R_CallMethodDef CallEntries[] = {
     {"_RcppMLPACK_IO_SetParamApproxKFNModelPtr", (DL_FUNC) &_RcppMLPACK_IO_SetParamApproxKFNModelPtr, 2},
     {"_RcppMLPACK_SerializeApproxKFNModelPtr", (DL_FUNC) &_RcppMLPACK_SerializeApproxKFNModelPtr, 1},
     {"_RcppMLPACK_DeserializeApproxKFNModelPtr", (DL_FUNC) &_RcppMLPACK_DeserializeApproxKFNModelPtr, 1},
+    {"_RcppMLPACK_bayesian_linear_regression_mlpackMain", (DL_FUNC) &_RcppMLPACK_bayesian_linear_regression_mlpackMain, 0},
+    {"_RcppMLPACK_IO_GetParamBayesianLinearRegressionPtr", (DL_FUNC) &_RcppMLPACK_IO_GetParamBayesianLinearRegressionPtr, 1},
+    {"_RcppMLPACK_IO_SetParamBayesianLinearRegressionPtr", (DL_FUNC) &_RcppMLPACK_IO_SetParamBayesianLinearRegressionPtr, 2},
+    {"_RcppMLPACK_SerializeBayesianLinearRegressionPtr", (DL_FUNC) &_RcppMLPACK_SerializeBayesianLinearRegressionPtr, 1},
+    {"_RcppMLPACK_DeserializeBayesianLinearRegressionPtr", (DL_FUNC) &_RcppMLPACK_DeserializeBayesianLinearRegressionPtr, 1},
     {"_RcppMLPACK_cf_mlpackMain", (DL_FUNC) &_RcppMLPACK_cf_mlpackMain, 0},
     {"_RcppMLPACK_IO_GetParamCFModelPtr", (DL_FUNC) &_RcppMLPACK_IO_GetParamCFModelPtr, 1},
     {"_RcppMLPACK_IO_SetParamCFModelPtr", (DL_FUNC) &_RcppMLPACK_IO_SetParamCFModelPtr, 2},
     {"_RcppMLPACK_SerializeCFModelPtr", (DL_FUNC) &_RcppMLPACK_SerializeCFModelPtr, 1},
     {"_RcppMLPACK_DeserializeCFModelPtr", (DL_FUNC) &_RcppMLPACK_DeserializeCFModelPtr, 1},
     {"_RcppMLPACK_dbscan_mlpackMain", (DL_FUNC) &_RcppMLPACK_dbscan_mlpackMain, 0},
-    {"_RcppMLPACK_decision_stump_mlpackMain", (DL_FUNC) &_RcppMLPACK_decision_stump_mlpackMain, 0},
-    {"_RcppMLPACK_IO_GetParamDSModelPtr", (DL_FUNC) &_RcppMLPACK_IO_GetParamDSModelPtr, 1},
-    {"_RcppMLPACK_IO_SetParamDSModelPtr", (DL_FUNC) &_RcppMLPACK_IO_SetParamDSModelPtr, 2},
-    {"_RcppMLPACK_SerializeDSModelPtr", (DL_FUNC) &_RcppMLPACK_SerializeDSModelPtr, 1},
-    {"_RcppMLPACK_DeserializeDSModelPtr", (DL_FUNC) &_RcppMLPACK_DeserializeDSModelPtr, 1},
     {"_RcppMLPACK_decision_tree_mlpackMain", (DL_FUNC) &_RcppMLPACK_decision_tree_mlpackMain, 0},
     {"_RcppMLPACK_IO_GetParamDecisionTreeModelPtr", (DL_FUNC) &_RcppMLPACK_IO_GetParamDecisionTreeModelPtr, 1},
     {"_RcppMLPACK_IO_SetParamDecisionTreeModelPtr", (DL_FUNC) &_RcppMLPACK_IO_SetParamDecisionTreeModelPtr, 2},
